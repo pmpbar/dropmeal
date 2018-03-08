@@ -1,0 +1,21 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  text-align: center;
+  height: 100%;
+}
+
+.dropzone {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.center-vertical {
+  margin-top: 25%;
+}
