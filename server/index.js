@@ -14,7 +14,8 @@ app.get('/', (req, res) => {
   res.json({ status: 'OK', data: 'Nothing here' });
 });
 app.post('/upload', upload.single('file'), (req, res) => {
-  const stream = fs.createWriteStream(`./uploads/${req.file.filename}.json`);
+  // const stream = fs.createWriteStream(`./uploads/${req.file.filename}.json`); // safer
+  const stream = fs.createWriteStream(`./uploads/${req.file.originalname}`);
   stream.once('open', () => {
     stream.write(JSON.stringify(req.file));
     stream.end();
